@@ -33,16 +33,16 @@ export default function IndexPage() {
       throw new Error("Invalid Keyword")
     }
     // const res = await fetch(
-    //   `https://searcher-api.onrender.com/crawl.json?start_requests=true&spider_name=ee&crawl_args={"search_term":"${keyword}"}`
+    //   `http://localhost:9080/crawl.json?start_requests=true&spider_name=ee&crawl_args={"search_term":"${keyword}"}`
     // )
     const ada = await fetch(
-      `http://localhost:9080/crawl.json?start_requests=true&spider_name=ada&crawl_args={"search_term":"${keyword}"}`
+      `https://searcher-api.onrender.com/crawl.json?start_requests=true&spider_name=ada&crawl_args={"search_term":"${keyword}"}`
     )
     const ee = await fetch(
-      `http://localhost:9080/crawl.json?start_requests=true&spider_name=ee&crawl_args={"search_term":"${keyword}"}`
+      `https://searcher-api.onrender.com/crawl.json?start_requests=true&spider_name=ee&crawl_args={"search_term":"${keyword}"}`
     )
     const zoommer = await fetch(
-      `http://localhost:9080/crawl.json?start_requests=true&spider_name=zoommer&crawl_args={"search_term":"${keyword}"}`
+      `https://searcher-api.onrender.com/crawl.json?start_requests=true&spider_name=zoommer&crawl_args={"search_term":"${keyword}"}`
     )
     const res1 = await ada.json()
     const res2 = await ee.json()
