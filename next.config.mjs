@@ -2,7 +2,29 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    appDir: true,
+    serverActions: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.ee.ge',
+        port: '',
+        pathname: '/*/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.zoommer.ge',
+        port: '',
+        pathname: '/zoommer-images/thumbs/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'adashop.ge',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 }
 
